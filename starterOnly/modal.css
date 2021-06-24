@@ -8,8 +8,6 @@
   margin: 0;
   padding: 0;
 }
-/* Landing Page */
-
 body {
   margin: 0;
   display: flex;
@@ -53,7 +51,6 @@ img {
 }
 
 .topnav a:hover {
-  background-color: #ff0000;
   color: #ffffff;
   border-radius: 15px;
 }
@@ -68,39 +65,6 @@ img {
   display: none;
 }
 
-@media screen and (max-width: 768px) {
-  .topnav a {display: none;}
-  .topnav a.icon {
-    float: right;
-    display: block;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .topnav.responsive {position: relative;}
-  .topnav.responsive .icon {
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
-  .topnav.responsive a {
-    float: none;
-    display: block;
-    text-align: left;
-  }
-}
-
-
-
- @media screen and (max-width: 540px) {
-  .topnav a {display: none;}
-  .topnav a.icon {
-    float: right;
-    display: block;
-    margin-top: -15px;
-  }
-} 
-
 main {
   font-size: 130%;
   font-weight: bolder;
@@ -114,7 +78,6 @@ main {
 
 
 }
-
 .modal-btn {
   font-size: 145%;
   background: #fe142f;
@@ -126,18 +89,35 @@ main {
   border-radius: 1rem;
   cursor: pointer;
 }
-
 .modal-btn:hover {
   background: #3876ac;
 }
-
 .footer {
   margin: 20px;
   padding: 10px;
   font-family: var(--font-slab);
 }
 
-/* Modal form */
+#validation-message {
+  width: 486px;
+  margin: auto;
+  padding: 50px 10px;
+  position: absolute;
+  left: 33%;
+  top:80%;
+  z-index: 2;
+  border: #279e7a solid 2px;
+  color: #279e7a;
+  font-weight: bold;
+  background-color: white;
+  justify-content: center;
+  display: none;
+}
+
+#validation-message h3 {
+  margin-left: 67px;
+}
+
 
 .button {
   background: #fe142f;
@@ -170,7 +150,7 @@ main {
 }
 
 .content {
-  margin: 5% auto;
+  margin: 7% auto;
   width: 100%;
   max-width: 500px;
   animation-name: modalopen;
@@ -184,13 +164,13 @@ main {
 }
 
 .modal-body {
-  padding: 15px 8%;
+  padding: 10px 8%;
   margin: 15px auto;
 }
 
 label {
   font-family: var(--font-default);
-  font-size: 17px;
+  font-size: 14px;
   font-weight: normal;
   display: inline-block;
   margin-bottom: 11px;
@@ -199,6 +179,9 @@ input {
   padding: 8px;
   border: 0.8px solid #ccc;
   outline: none;
+}
+.checkbox-input {
+  font-size: 12px;
 }
 .text-control {
   margin: 0;
@@ -226,18 +209,14 @@ input {
 .formData[data-error-visible="true"] .text-control {
   border: 2px solid #e54858;
 }
-/* 
-input[data-error]::after {
-    content: attr(data-error);
-    font-size: 0.4em;
-    color: red;
-} */
+
 .checkbox-label,
 .checkbox2-label {
   position: relative;
-  margin-left: 36px;
+  margin-left: 29px;
   font-size: 12px;
   font-weight: normal;
+  text-align: start;
 }
 .checkbox-label .checkbox-icon,
 .checkbox2-label .checkbox-icon {
@@ -249,7 +228,7 @@ input[data-error]::after {
   text-indent: 29px;
   white-space: nowrap;
   position: absolute;
-  left: -30px;
+  left: -24px;
   top: -1px;
   transition: 0.3s;
 }
@@ -322,7 +301,8 @@ input[data-error]::after {
   transform: rotate(-45deg);
 }
 .btn-submit,
-.btn-signup {
+.btn-signup,
+.btn-close {
   background: #fe142f;
   display: block;
   margin: 0 auto;
@@ -333,7 +313,28 @@ input[data-error]::after {
   cursor: pointer;
   border: 0;
 }
-/* custom select styles */
+
+#confirmation {
+  height: 754px;
+  width: 66%;
+  margin: auto;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#confirmation h1 {
+  text-align: center;
+  font-size: 2rem;
+}
+
+#confirmation .btn-close {
+  position: absolute;
+  bottom: 20px;
+  left : 32%;
+}
+
+
 .custom-select {
   position: relative;
   font-family: Arial;
@@ -348,7 +349,6 @@ input[data-error]::after {
   background-color: #fff;
 }
 
-/* Style the arrow inside the select element: */
 .select-selected:after {
   position: absolute;
   content: "";
@@ -363,7 +363,7 @@ input[data-error]::after {
   border-radius: 5px 0 5px 0;
 }
 
-/* Point the arrow upwards when the select box is open (active): */
+
 .select-selected.select-arrow-active:after {
   transform: rotate(135deg);
   top: 13px;
@@ -380,7 +380,6 @@ input[data-error]::after {
   height: 48px;
 }
 
-/* Style items (options): */
 .select-items {
   position: absolute;
   background-color: #fff;
@@ -390,7 +389,6 @@ input[data-error]::after {
   z-index: 99;
 }
 
-/* Hide the items when the select box is closed: */
 .select-hide {
   display: none;
 }
@@ -399,10 +397,10 @@ input[data-error]::after {
 .same-as-selected {
   background-color: rgba(0, 0, 0, 0.1);
 }
-/* custom select end */
+
 .text-label {
   font-weight: normal;
-  font-size: 16px;
+  font-size: 14px;
 }
 .hero-section {
   min-height: 93vh;
@@ -420,7 +418,7 @@ input[data-error]::after {
   color: #fff;
   position: relative;
   text-align: left;
-  min-width: 424px;
+  min-width: 80%;
 }
 .hero-content::after {
   content: "";
@@ -478,6 +476,17 @@ footer {
   padding-right: 2vw;
   margin: 0 20px;
 }
+
+
+
+
+
+@media screen and (max-width: 1000px) {
+  .hero-headline {
+    white-space: normal !important;
+  }
+}
+
 @media screen and (max-width: 800px) {
   .hero-section {
     display: block;
@@ -501,6 +510,7 @@ footer {
   .hero-text {
     width: unset;
     font-size: 1.5rem;
+    text-align: justify;
   }
   .hero-img img {
     border-radius: 10px;
@@ -515,7 +525,83 @@ footer {
     margin-top: 50px;
     text-align: center;
   }
+  .hero-headline { 
+    white-space: normal;
+  }
 }
+
+@media screen and (max-width: 540px) {
+  .topnav a {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+    margin-top: -15px;
+  }
+  .icon {
+    top:17px !important;
+  }
+  .hero-headline {
+    font-size: 36px;
+  }
+  .hero-text {
+    font-size: 13px;
+    margin-top: 25px;
+  }
+  .header-logo img {
+    width: 103px;
+  }
+  .copyrights {
+    font-size: 10px;
+  }
+  .bground {
+    background-color: rgba(255,255,255,0);
+  }
+  .content {
+    top: 2%;
+  }
+
+}
+
+@media screen and (max-width: 320px) {
+  .icon {
+    top:43px !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .topnav a {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+    color: #ff0000;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .hero-content {
+    padding: 0 0 20px 0 !important ;
+  }
+  .header-logo {
+    margin-left: 10px;
+  }
+  .copyrights {
+    margin-top: 0 !important;
+  }
+}
+
+
+
 
 @keyframes modalopen {
   from {
@@ -526,4 +612,3 @@ footer {
     opacity: 1;
   }
 }
-
