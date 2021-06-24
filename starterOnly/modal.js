@@ -81,7 +81,7 @@ function validate () {
   console.log(birthDate.value)
 
   if (!firstName.value.match(/(.*[a-z]){2}/i) || firstName.value == ' ' || firstName.value == null || firstName.value.length < 2) {
-    errorFirst.innerText = 'Veuillez entrer 2 caractères ou plus pour le champ du Prénom.';
+    errorFirst.innerText = 'Deux caractères ou plus requis.';
     errorFirst.style.color = 'red';
     errorFirst.style.fontSize = '0.8rem';
     errorFirst.style.marginTop = '10px';
@@ -93,7 +93,7 @@ function validate () {
   };
 
     if (!lastName.value.match(/(.*[a-z]){2}/i) || lastName.value == ' ' || lastName.value == null || lastName.value.length < 2) { 
-      errorLast.innerText = 'Veuillez entrer 2 caractères ou plus pour le champ du Nom.';
+      errorLast.innerText = 'Deux caractères ou plus requis.';
       errorLast.style.color = 'red';
       errorLast.style.fontSize = '0.8rem';
       errorLast.style.marginTop = '10px';
@@ -117,7 +117,7 @@ function validate () {
   };
 
   if (!birthDate.value.match(/^\d{4}\-(0?[1-9]|1[012])\-(0?[1-9]|[12][0-9]|3[01])$/)) { 
-    errorBirth.innerText = 'Veuillez remplir votre date danniversaire';
+    errorBirth.innerText = 'Veuillez remplir votre date de naissance';
     errorBirth.style.color = 'red';
     errorBirth.style.fontSize = '0.8rem';
     errorBirth.style.marginTop = '10px';
@@ -129,7 +129,7 @@ function validate () {
     }
 
   if (!quantityTournament.value.match(numbers)) { 
-    errorQuantity.innerText = 'Vous devez indiquer un nombre';
+    errorQuantity.innerText = 'Vous devez indiquer un nombre valide';
     errorQuantity.style.color = 'red';
     errorQuantity.style.fontSize = '0.8rem';
     errorQuantity.style.marginTop = '10px';
@@ -151,7 +151,7 @@ function validate () {
   };
 
   if (!validation.checked) {
-    errorValidation.innerText = 'Vous devez vérifier que vous acceptez les termes et conditions';
+    errorValidation.innerText = 'Les termes et conditions doivent etre acceptés';
     errorValidation.style.color = 'red';
     errorValidation.style.fontSize = '0.8rem';
     errorValidation.style.marginTop = '10px';
