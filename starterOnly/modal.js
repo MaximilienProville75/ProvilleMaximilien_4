@@ -164,6 +164,7 @@ function validate () {
 
   if (firstChecked == true && lastChecked == true && mailChecked == true && tournamentChecked == true && radioChecked == true && conditionsChecked == true && birthChecked == true) {
     form.style.display = "none";
+    confirmation.style.display = "flex";
   }
 }
 
