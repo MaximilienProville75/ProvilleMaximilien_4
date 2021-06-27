@@ -18,11 +18,11 @@
     </div>
     <div class="main-navbar">
       
-      <a href="#" class="active"><span>Accueil</span></a>
+      <a href="#" class="active"><span>Event details</span></a>
       <a href="#"><span>Détails de l'évènement</span></a>
-      <a href="#"><span>À propos</span></a>
+      <a href="#"><span>About us</span></a>
       <a href="#"><span>Contact</span></a>
-      <a href="#"><span>Évènements passés</span></a>
+      <a href="#"><span>Pass events</span></a>
       <a href="javascript:void(0);" class="icon" onclick="editNav()">
         <i class="fa fa-bars"></i>
       </a>
@@ -34,22 +34,21 @@
       <div class="hero-section">
         <div class="hero-content">
           <h1 class="hero-headline">
-            Marathon national<br>
-            de jeux vidéos
+            US Nationwide <br> 
+            Game-a-Thon
           </h1>
           <p class="hero-text">
-            Vous aimez jouer ? Notre prochain évènement gaming est ouvert
-            aux réservations... Places limitées !
+            Do you live to game? Our next gaming event is now accepting reservations for players, but spots are limited.
           </p>
           <button class="btn-signup modal-btn">
-            je m'inscris
+            Sign Up Now
           </button>
         </div>
         <div class="hero-img">
           <img src="./bg_img.jpg" alt="img" />
         </div>
         <button class="btn-signup modal-btn">
-          Je m'inscris
+          Sign Up Now
         </button>
       </div>
 
@@ -58,8 +57,10 @@
           <span class="close"></span>
           <div class="modal-body">
             <div id="confirmation">
-              <h1>Merci pour votre Inscription</h1>
-              <button class="btn-close">Fermer</button>
+              <h1> Thank you for 
+                submitting your 
+                registration details</h1>
+              <button class="btn-close">Close</button>
             </div>
             <form
               id="form"
@@ -70,7 +71,7 @@
             >
               <div
                 class="formData">
-                <label for="first" >Prénom</label><br>
+                <label for="first" >First Name</label><br>
                 <input
                   class="text-control"
                   type="text"
@@ -82,7 +83,7 @@
               <div id="error-first"></div>
               <div
                 class="formData">
-                <label for="last" >Nom</label><br>
+                <label for="last" >Last Name</label><br>
                 <input
                   class="text-control"
                   type="text"
@@ -94,7 +95,7 @@
               <div id="error-last"></div>
               <div
                 class="formData">
-                <label for="email" >E-mail</label><br>
+                <label for="email" >Email</label><br>
                 <input
                   class="text-control"
                   type="email"
@@ -105,7 +106,7 @@
               <div id="error-mail"></div>
               <div
                 class="formData">
-                <label for="birthdate" >Date de naissance</label><br>
+                <label for="birthdate" >Birthdate</label><br>
                 <input
                   class="text-control"
                   type="date"
@@ -116,11 +117,11 @@
               <div id="error-birth"></div>
               <div
                 class="formData">
-                <label for="quantity" >À combien de tournois GameOn avez-vous déjà participé ?</label><br>
+                <label for="quantity" >How many tournaments have you attended?</label><br>
                 <input type="number" class="text-control" id="quantity" name="quantity" min="0" max="99">
               </div>
               <div id="error-quantity"></div>
-              <p class="text-label">Quelles villes ?</p>
+              <p class="text-label">Which location?</p>
               <div
                 class="formData">
                 <input
@@ -202,7 +203,7 @@
                 />
                 <label class="checkbox2-label" for="checkbox1" required>
                   <span class="checkbox-icon"></span>
-                  J'ai lu et accepté les conditions d'utilisation.
+                  I read and accept the terms and conditions.
                 </label>
                 <br>
                 <input 
@@ -211,8 +212,8 @@
                 id="checkbox2" 
                 />
                 <label class="checkbox2-label" for="checkbox2">
-                  <span class="checkbox-icon"></span>
-                  Je souhaite être prévenu des prochains évènements.
+                  <span class="checkbox-icon checkbox-icon_2"></span>
+                  I'd like to be informed for upcoming events.
                 </label>
                 <br>
               </div>
@@ -221,7 +222,7 @@
                 class="btn-submit"
                 type="submit"
                 class="button"
-                value="C'est parti"
+                value="Go!"
               />
             </form>
           </div>

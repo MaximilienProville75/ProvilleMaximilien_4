@@ -315,8 +315,8 @@ input {
 }
 
 #confirmation {
-  height: 754px;
-  width: 66%;
+  height: 607px;
+  width: 100%;
   margin: auto;
   display: none;
   flex-direction: column;
@@ -325,13 +325,14 @@ input {
 
 #confirmation h1 {
   text-align: center;
-  font-size: 2rem;
+  font-size: 36px;
 }
 
 #confirmation .btn-close {
   position: absolute;
-  bottom: 20px;
-  left : 32%;
+  right: 0;
+  bottom: 45px;
+  left: 0;
 }
 
 
@@ -514,7 +515,6 @@ footer {
   }
   .hero-img img {
     border-radius: 10px;
-    margin-top: 40px;
   }
   .hero-section > .btn-signup {
     display: block;
@@ -541,10 +541,16 @@ footer {
     top:17px !important;
   }
   .hero-headline {
-    font-size: 36px;
+    font-family: DM Sans;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 47px;
+    text-align: justify;
   }
   .hero-text {
     font-size: 13px;
+    margin-bottom: 15px;
     margin-top: 25px;
   }
   .header-logo img {
@@ -557,7 +563,19 @@ footer {
     background-color: rgba(255,255,255,0);
   }
   .content {
-    top: 2%;
+    top: 4.25%;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+  }
+  label{
+    margin-bottom: 0px;
+  }
+  .checkbox-label, .checkbox2-label {
+    margin-top: 5px;
+    margin-bottom: 10px;
+  }
+  body {
+    overflow-y: hidden;
   }
 
 }
@@ -597,6 +615,18 @@ footer {
   }
   .copyrights {
     margin-top: 0 !important;
+    position: absolute;
+    position: absolute;
+    left: 16.46%;
+    right: 16.87%;
+    bottom: 33.33%;
+    top: 95%;
+  }
+  .btn-submit, .btn-signup, .btn-close {
+    margin-top: 15px;
+  }
+  #confirmation {
+    height: 616px;
   }
 }
 
