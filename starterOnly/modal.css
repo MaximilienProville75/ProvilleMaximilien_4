@@ -29,7 +29,6 @@ img {
 }
 
 .topnav {
-  overflow: hidden;
   margin: 3.5%;
 }
 .header-logo {
@@ -49,6 +48,7 @@ img {
   font-size: 20px;
   font-family: Roboto, sans-serif;
 }
+.topnav a
 
 .topnav a:hover {
   color: #ffffff;
@@ -56,10 +56,11 @@ img {
 }
 
 .topnav a.active {
-  background-color: #ff0000;
-  color: #ffffff;
-  border-radius: 15px;
+  background-color: #ff0000 !important;
+    color: #ffffff !important;
+    border-radius: 15px;
 }
+
 
 .topnav .icon {
   display: none;
@@ -489,6 +490,9 @@ footer {
 }
 
 @media screen and (max-width: 800px) {
+  .topnav.responsive {
+    position: relative;
+  }
   .hero-section {
     display: block;
     box-shadow: unset;
@@ -531,11 +535,20 @@ footer {
 }
 
 @media screen and (max-width: 540px) {
+  .copyrights {
+    margin-top: 0 !important;
+    position: absolute;
+    position: absolute;
+    left: 16.46%;
+    right: 16.87%;
+    bottom: 33.33%;
+    top: 95%;
+  }
   .topnav a {display: none;}
   .topnav a.icon {
     float: right;
     display: block;
-    margin-top: -15px;
+    margin-top: -12px;
   }
   .icon {
     top:17px !important;
@@ -587,6 +600,22 @@ footer {
 }
 
 @media screen and (max-width: 768px) {
+
+  .topnav.responsive .main-navbar {
+    box-shadow: 4px 5px 5px darkred;
+    background-color: white;
+    border-radius: 20px;
+    border: 1px solid black;
+  }
+  .topnav.responsive a:hover{
+    text-decoration: underline;
+    color: red;
+  }
+
+  .main-navbar {
+    float: right;
+    width: 173px;
+  }
   .topnav a {display: none;}
   .topnav a.icon {
     float: right;
@@ -596,7 +625,11 @@ footer {
 }
 
 @media screen and (max-width: 768px) {
-  .topnav.responsive {position: relative;}
+  .topnav.responsive {
+    position: relative;
+    height: 43px;
+    z-index: 3;
+  }
   .topnav.responsive .icon {
     position: absolute;
     right: 0;
@@ -613,15 +646,7 @@ footer {
   .header-logo {
     margin-left: 10px;
   }
-  .copyrights {
-    margin-top: 0 !important;
-    position: absolute;
-    position: absolute;
-    left: 16.46%;
-    right: 16.87%;
-    bottom: 33.33%;
-    top: 95%;
-  }
+
   .btn-submit, .btn-signup, .btn-close {
     margin-top: 15px;
   }

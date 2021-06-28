@@ -64,6 +64,7 @@ const errorValidation = document.getElementById ('error-validation');
 const confirmation = document.getElementById ('confirmation');
 const confirmationCloseBtn = document.getElementsByClassName('btn-close');
 
+const FormData = document.getElementsByClassName('formData');
 
 form.addEventListener('submit', (e) => {
   e.preventDefault();
@@ -86,8 +87,6 @@ function validate () {
     errorFirst.style.fontSize = '0.8rem';
     firstName.style.border = 'solid red 2px';
   } else {
-    errorFirst.style.display = 'none';
-    firstName.style.border = 'none';
     firstChecked = true;
   };
 
@@ -159,6 +158,8 @@ function validate () {
     form.style.display = "none";
     confirmation.style.display = "flex";
   }
+
+
 }
 
 
