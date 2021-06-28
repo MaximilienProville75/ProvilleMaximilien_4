@@ -101,7 +101,7 @@ function validate () {
     lastChecked = true;
   };
 
-    if (!/^[-a-z0-9~!$%^&*_=+}{\'?]+(\.[-a-z0-9~!$%^&*_=+}{\'?]+)*@([a-z0-9_][-a-z0-9_]*(\.[-a-z0-9_]+)*\.(aero|arpa|biz|com|coop|edu|gov|info|int|mil|museum|name|net|org|pro|travel|mobi|[a-z][a-z])|([0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}))(:[0-9]{1,5})?$/.test(eMail.value)) { 
+    if (!/^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/ .test(eMail.value)) { 
       errorMail.innerText = 'Please enter a valid email address';
       errorMail.style.color = 'red';
       errorMail.style.fontSize = '0.8rem';
@@ -112,7 +112,7 @@ function validate () {
     mailChecked = true;
   };
 
-  if (!birthDate.value.match(/^\d{4}\-(0?[1-9]|1[012])\-(0?[1-9]|[12][0-9]|3[01])$/)) { 
+  if (!birthDate.value.match(/^(0?[1-9]|[12][0-9]|3[01])[\/\-](0?[1-9]|1[012])[\/\-]\d{4}$/)) { 
     errorBirth.innerText = 'Please fill in your date of birth';
     errorBirth.style.color = 'red';
     errorBirth.style.fontSize = '0.8rem';
