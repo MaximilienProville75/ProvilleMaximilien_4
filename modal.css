@@ -536,13 +536,8 @@ footer {
 
 @media screen and (max-width: 540px) {
   .copyrights {
-    margin-top: 0 !important;
-    position: absolute;
-    position: absolute;
-    left: 16.46%;
-    right: 16.87%;
-    bottom: 33.33%;
-    top: 95%;
+    margin-top: 50px;
+    text-align: center;
   }
   .topnav a {display: none;}
   .topnav a.icon {
