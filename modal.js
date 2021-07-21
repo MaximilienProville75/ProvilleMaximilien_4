@@ -25,6 +25,7 @@ function launchModal() {
   modalbg.style.display = "block";
 }
 function closeModal() {
+  
   modalbg.style.display = "none";
 };
 modalCross[0].addEventListener ("click", closeModal);
